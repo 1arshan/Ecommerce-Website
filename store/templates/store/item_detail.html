@@ -1,0 +1,37 @@
+{% extends 'store/main.html' %}
+{% load static%}
+{% block content %}
+    <div class="row my-2">
+		<div class="col-lg-4 order-lg-1 text-center">
+			<img src="{{product.get_imageURL}}" width="200" height="200">
+        </div>
+        <div class="col-lg-8 order-lg-2">
+            <div class="tab-content py-4">
+                <div class="tab-pane active" id="profile">
+                    <h3 class="mb-3">{{product.name}}</h3>
+                    <h4 class="mb-3">${{product.price}}</h4>
+                    <div class="row">
+                        <div class="col-md-6">
+
+							<p><strong>Description: </strong>{{product.description}}</p>
+							<!-- <p><strong>E-Mail: </strong>{{user.email}}</p> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+    <div class="row my-2">
+        <div class="col-lg-4 order-lg-1 text-center">
+            <button  class="update_cart btn btn-outline-secondary add-btn" product_id ="{{product.id}}">Add to Cart</button>
+        </div>
+        <div class="col-lg-6 order-lg-2">
+            <div class="quantity">
+                <img action ="add" product_id ="{{product.id}}"  class="update_cart_quantity chg-quantity" src="{% static  'images/arrow-up.png' %}">
+                            
+                <img action ="remove" product_id ="{{product.id}}" class="update_cart_quantity chg-quantity " src="{% static  'images/arrow-down.png' %}">
+            </div>
+        </div>
+
+    </div>
+{% endblock %}
