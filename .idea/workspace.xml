@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0417d6db-8e9c-40ab-8cac-c4629a61f1ee" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/static/images/f3ecd474-f28b-46f6-963b-25e6e8c47235.jpeg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_readme/edit profile.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/image_readme/profile.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,7 +65,7 @@
       <workItem from="1608844021973" duration="752000" />
       <workItem from="1608844777463" duration="302000" />
       <workItem from="1608979726364" duration="297000" />
-      <workItem from="1609018096012" duration="2726000" />
+      <workItem from="1609018096012" duration="3124000" />
     </task>
     <servers />
   </component>
