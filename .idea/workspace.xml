@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0417d6db-8e9c-40ab-8cac-c4629a61f1ee" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Ecommerce-Website.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Ecommerce-Website.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,21 +23,21 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../gform" />
   </component>
   <component name="RunManager">
     <configuration name="Ecommerce-Website" type="Python.DjangoServer" factoryName="Django server">
-      <module name="Ecommerce-Website" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="$PROJECT_DIR$/../adcbackend/venv/bin/python" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
       <option name="launchJavascriptDebuger" value="false" />
       <option name="port" value="8000" />
       <option name="host" value="" />
@@ -60,6 +61,8 @@
       <workItem from="1608757937150" duration="796000" />
       <workItem from="1608844021973" duration="752000" />
       <workItem from="1608844777463" duration="302000" />
+      <workItem from="1608979726364" duration="297000" />
+      <workItem from="1609018096012" duration="677000" />
     </task>
     <servers />
   </component>
