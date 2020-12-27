@@ -2,7 +2,7 @@
 
 ## Setup
 1. pip install -r requirements.txt
-2. cd Qoura-clone
+2. cd Ecommerce-Website
 3. python manage.py makemigrations
 4. python manage.py migrate
 5. python manage.py runserver
