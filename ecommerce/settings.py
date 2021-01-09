@@ -26,7 +26,7 @@ SECRET_KEY = 'b_jk^-3-9x5@!xfc#ocq8^=9^2ie2-100uxr2hujt))a=&ni9u'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['ec2-13-234-136-218.ap-south-1.compute.amazonaws.com']
 
 
 # Application definition
@@ -136,13 +136,13 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = [STATIC_DIR,]
-STATIC_ROOT = os.path.join(BASE_DIR ,'staticfiles')
+#STATICFILES_DIRS = [STATIC_DIR]
+STATIC_ROOT = os.path.join(BASE_DIR ,'static')
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MEDIA_URL = '/images/'
-MEDIA_ROOT = os.path.join(STATIC_DIR,'images')
-print(MEDIA_ROOT)
+MEDIA_ROOT = os.path.join(BASE_DIR,'static/images')
+#print(MEDIA_ROOT)
 
 SOCIAL_AUTH_URL_NAMESPACE = 'social'
 SOCIAL_AUTH_URL_NAMESPACE = "social"
