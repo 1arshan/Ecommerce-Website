@@ -24,8 +24,8 @@ urlpatterns = [
     path('',include('accounts.urls'),name='auth'),
     path('',include('store.api.urls'),name='api'),
     path('', include('django.contrib.auth.urls')),
-    path('', include('django.contrib.auth.urls')),
-    path(r'^oauth/', include('social_django.urls', namespace='social')),
+   # path('', include('django.contrib.auth.urls')),
+   # path(r'^oauth/', include('social_django.urls', namespace='social')),
 ]
-
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
