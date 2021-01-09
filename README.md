@@ -1,4 +1,6 @@
 # Ecommerce-Website
+- *This website is live and is currently hosted on AWS*
+- URL: [1arshan.me/ecommerce](http://ec2-13-234-136-218.ap-south-1.compute.amazonaws.com)
 
 ## Setup
 1. pip install -r requirements.txt
