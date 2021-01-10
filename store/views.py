@@ -105,12 +105,11 @@ def insert_into_cart(request, id, x):
 
 
 # @csrf_exempt
-def update_item_quantity(request):
+def update_item_quantity(request, id, action, x):
     about = 'Some Error Occurred'
     if request.user.is_authenticated:
         about = 'Item Updated'
-        product_id = request.POST.get('product_id')
-        action = request.POST.get('action')
+        product_id = id
         product = Product.objects.get(id=product_id)
         item = OrderItem.objects.get(product=product, user=request.user)
 
@@ -125,7 +124,11 @@ def update_item_quantity(request):
     dic = {
         'data': about,
     }
-    return JsonResponse(dic, safe=False)
+    if x == 0:
+        return HttpResponseRedirect(reverse('item_detail', args=[id]))
+    else:
+        #return HttpResponseRedirect(reverse('item_detail', args=[id]))
+        return HttpResponseRedirect(reverse('cart'))
 
 
 def cart(request):

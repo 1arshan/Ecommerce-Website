@@ -6,7 +6,6 @@
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store/templates/store/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/store/templates/store/cart.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store/templates/store/item_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/store/templates/store/item_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/templates/store/show_items.html" beforeDir="false" afterPath="$PROJECT_DIR$/store/templates/store/show_items.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/views.py" afterDir="false" />
     </list>
@@ -74,7 +73,7 @@
       <workItem from="1610272074612" duration="3297000" />
       <workItem from="1610285242451" duration="4969000" />
       <workItem from="1610294954048" duration="1930000" />
-      <workItem from="1610306004387" duration="2884000" />
+      <workItem from="1610306004387" duration="8205000" />
     </task>
     <servers />
   </component>
