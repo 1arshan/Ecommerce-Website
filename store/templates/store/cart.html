@@ -1,5 +1,6 @@
 {% extends 'store/main.html' %}
 {% load static %}
+{% csrf_token %}
 {% block content %}
 	{% if total_item_cart %}
 		<h2>Shopping Cart</h2>

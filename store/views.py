@@ -72,15 +72,15 @@ def checkout(request):
     return render(request, 'store/checkout.html', context)
 
 
-#@csrf_exempt
-def insert_into_cart(request,id):
+# @csrf_exempt
+def insert_into_cart(request, id, x):
     total_item_cart = 0
     about = 'item_not_added'
     print("asdas")
     if request.user.is_authenticated:
         about = 'Item Added'
-        #product_id = request.POST.get('product_id')
-        product_id =id
+        # product_id = request.POST.get('product_id')
+        product_id = id
         product = Product.objects.get(id=product_id)
         if OrderItem.objects.filter(product=product, user=request.user).exists():
             item = OrderItem.objects.get(product=product, user=request.user)
@@ -98,11 +98,13 @@ def insert_into_cart(request,id):
         'data': about,
         'total_item_cart': total_item_cart,
     }
-    return HttpResponseRedirect(reverse('item_detail', args=[id]))
-    #return JsonResponse(dic, safe=False)
+    if x == 0:
+        return HttpResponseRedirect(reverse('item_detail', args=[id]))
+    else:
+        return HttpResponseRedirect(reverse('show_items', args=[x]))
 
 
-@csrf_exempt
+# @csrf_exempt
 def update_item_quantity(request):
     about = 'Some Error Occurred'
     if request.user.is_authenticated:
@@ -165,7 +167,7 @@ def item_detail(request, id):
             total_item_cart += item.quantity
 
     product = Product.objects.get(id=id)
-    #print(product.pk)
+    # print(product.pk)
     product_categories = ProductCategories.objects.all()
 
     context = {
@@ -173,7 +175,7 @@ def item_detail(request, id):
         'product': product,
         'total_item_cart': total_item_cart,
         'id': product.pk,
-        
+
     }
 
     return render(request, 'store/item_detail.html', context)
@@ -283,6 +285,7 @@ def show_items(request, id):
         'product_category': product_category,
         'products': products,
         'total_item_cart': total_item_cart,
+        'id': id,
     }
     return render(request, 'store/show_items.html', context)
 

@@ -10,7 +10,8 @@
 					<h6><strong>{{product.name}}</strong></h6>
 					<hr>
 
-					<button  class="update_cart btn btn-outline-secondary add-btn" product_id ="{{product.id}}">Add to Cart</button>
+					<!--<button  class="update_cart btn btn-outline-secondary add-btn" product_id ="{{product.id}}">Add to Cart</button> -->
+                    <a href="{% url 'insert_cart' product.id id%}" target="_parent">Add to Cart</a>
 
 					<a class="btn btn-outline-success" href="{% url 'item_detail' product.id %}">View</a>
 					<h4 style="display: inline-block; float: right"><strong>&#8377;{{product.price}}</strong></h4>
