@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0417d6db-8e9c-40ab-8cac-c4629a61f1ee" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/store/filling-database.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/templates/store/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/store/templates/store/cart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/templates/store/item_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/store/templates/store/item_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/views.py" afterDir="false" />
     </list>
@@ -14,8 +17,31 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/accounts/urls.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/store/templates/store/show_items.html" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ecommerce/urls.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/accounts/views.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/store/admin.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/store/models.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/store/urls.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ecommerce/settings.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/store/templates/store/cart.html" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/store/views.py" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1m4fl8QaziKECvTrQCseQxhs7GI" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -27,7 +53,8 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../internship-eyantra/cloudsim/backend" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunManager">
     <configuration name="Ecommerce-Website" type="Python.DjangoServer" factoryName="Django server">
@@ -74,6 +101,21 @@
       <workItem from="1610285242451" duration="4969000" />
       <workItem from="1610294954048" duration="1930000" />
       <workItem from="1610306004387" duration="8205000" />
+      <workItem from="1612552834056" duration="1287000" />
+      <workItem from="1616960974518" duration="2296000" />
+      <workItem from="1616998284184" duration="1741000" />
+      <workItem from="1617014015791" duration="610000" />
+      <workItem from="1621927863615" duration="4600000" />
+      <workItem from="1621943732522" duration="599000" />
+      <workItem from="1621966059327" duration="726000" />
+      <workItem from="1622006430174" duration="599000" />
+      <workItem from="1622024171132" duration="599000" />
+      <workItem from="1622043354851" duration="638000" />
+      <workItem from="1622049363319" duration="1373000" />
+      <workItem from="1622128583247" duration="599000" />
+      <workItem from="1622141962488" duration="903000" />
+      <workItem from="1622180892733" duration="1040000" />
+      <workItem from="1622191512917" duration="2868000" />
     </task>
     <servers />
   </component>

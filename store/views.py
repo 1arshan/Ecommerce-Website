@@ -9,6 +9,8 @@ from django.http import HttpResponse, HttpResponseRedirect, Http404
 from django.urls import reverse
 import datetime
 import json
+from rest_framework import generics
+from . import serializers
 
 
 # Create your views here.
@@ -127,7 +129,7 @@ def update_item_quantity(request, id, action, x):
     if x == 0:
         return HttpResponseRedirect(reverse('item_detail', args=[id]))
     else:
-        #return HttpResponseRedirect(reverse('item_detail', args=[id]))
+        # return HttpResponseRedirect(reverse('item_detail', args=[id]))
         return HttpResponseRedirect(reverse('cart'))
 
 
@@ -353,3 +355,9 @@ def update_address(request, id):
     }
 
     return render(request, 'store/update_address.html', context)
+
+
+class InsetDatabase(generics.CreateAPIView):
+    permission_classes = []
+    serializer_class = serializers.StoreSerializer
+    queryset = Product.objects.all()
