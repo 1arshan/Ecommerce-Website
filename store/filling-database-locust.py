@@ -25,4 +25,5 @@ class QuickstartUser(HttpUser):
         postfix = str(random.randrange(1, 50))
         name = prefix + " - " + postfix
         price = str(random.randrange(100, 5000))
+        attach = open('file.pdf', 'rb')
         self.client.post("/insert/database/", {"category": category, "name": name, "price": price})

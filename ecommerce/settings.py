@@ -84,6 +84,20 @@ TEMPLATES = [
     },
 ]
 
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://127.0.0.1:6379/1",
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient"
+        },
+        "KEY_PREFIX": "example"
+    }
+}
+# Cache time to live is 15 minutes.
+CACHE_TTL = 60 * 15
+
+
 WSGI_APPLICATION = 'ecommerce.wsgi.application'
 
 
@@ -140,9 +154,12 @@ STATICFILES_DIRS = [STATIC_DIR] # C
 STATIC_ROOT = os.path.join(BASE_DIR ,'staticfiles') #C
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
-MEDIA_URL = '/images/'
-MEDIA_ROOT = os.path.join(STATIC_DIR,'images') #C
+#MEDIA_URL = '/images/'
+#MEDIA_ROOT = os.path.join(STATIC_DIR,'images') #C
 #print(MEDIA_ROOT)
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
 
 SOCIAL_AUTH_URL_NAMESPACE = 'social'
 SOCIAL_AUTH_URL_NAMESPACE = "social"

@@ -1,16 +1,20 @@
-from django.shortcuts import render
 from .models import Product, OrderItem, ShippingAddress, FullOrder, Purchased_item
 from .models import ProductCategories
-from django.http import JsonResponse
-from django.views.decorators.csrf import csrf_exempt
 from .forms import ShippingForm, ShippingUpdateForm
-from django.contrib.auth.decorators import login_required
-from django.http import HttpResponse, HttpResponseRedirect, Http404
+from django.http import HttpResponseRedirect, Http404
 from django.urls import reverse
 import datetime
-import json
 from rest_framework import generics
 from . import serializers
+
+from django.conf import settings
+from django.core.cache.backends.base import DEFAULT_TIMEOUT
+from django.shortcuts import render
+from django.views.decorators.cache import cache_page
+
+from .filling_database_shell import AutomatedDatabaseFilling
+from rest_framework.response import Response
+from rest_framework import status
 
 
 # Create your views here.
@@ -295,24 +299,23 @@ def show_items(request, id):
     return render(request, 'store/show_items.html', context)
 
 
+CACHE_TTL = getattr(settings, 'CACHE_TTL', DEFAULT_TIMEOUT)
+
+
+@cache_page(CACHE_TTL)
 def search(request):
     total_item_cart = 0
 
-    query = request.GET['search']
-
+    query = str(request.GET['search'])
+    # print("query" ,query)
     if request.user.is_authenticated:
         items = OrderItem.objects.filter(user=request.user)
         for item in items:
             total_item_cart += item.quantity
 
     product_categories = ProductCategories.objects.all()
-    products_temp = Product.objects.all()
-
-    products = []
-
-    for p in products_temp:
-        if query.lower() in p.name.lower() or query.lower() in p.description.lower():
-            products.append(p)
+    products = Product.objects.filter(name__icontains=query)
+    # print(products)
 
     context = {
         'products': products,
@@ -357,7 +360,15 @@ def update_address(request, id):
     return render(request, 'store/update_address.html', context)
 
 
-class InsetDatabase(generics.CreateAPIView):
+class InsetDatabase(generics.CreateAPIView, generics.ListAPIView):
     permission_classes = []
     serializer_class = serializers.StoreSerializer
-    queryset = Product.objects.all()
+
+    def get_queryset(self):
+        x = AutomatedDatabaseFilling("name")
+        x.retriveing_previous_pk()
+        temp = x.updating_database()
+        print(temp)
+        return Product.objects.filter(pk="53")
+        #return Response("ok", status=status.HTTP_201_CREATED)
+    # queryset = Product.objects.all()

@@ -4,7 +4,7 @@ import datetime
 
 
 # Create your models here.
-# TODO : fill database ; Product &Product Categories
+# TODO : fill database ; Product &Product Categories enter photo into it
 # only focus on product
 
 class ProductCategories(models.Model):
@@ -27,7 +27,8 @@ class Product(models.Model):
     category = models.ManyToManyField(ProductCategories)
     name = models.CharField(max_length=100, blank=False, name=False)
     price = models.FloatField(blank=False, null=False)
-    image = models.ImageField(null=True, blank=True)
+    #image = models.ImageField(null=True, blank=True)
+    image = models.FileField(null=True, blank=True)
     description = models.TextField(null=True, blank=True)
 
     def __str__(self):
